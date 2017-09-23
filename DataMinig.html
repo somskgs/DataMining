@@ -337,6 +337,14 @@ confusionMatrix(prediction3, testset$classe)</code></pre>
 ## Detection Prevalence   0.2904   0.1843   0.1835   0.1674   0.1743
 ## Balanced Accuracy      0.9663   0.9286   0.9491   0.9369   0.9418</code></pre>
 </div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>Analysis was performed usign 3 models: Generalized Classification Trees, Random Forest and K-Means Clustering. Based on the result we find that Random Forest Model stands out to be the most accurate model to make the prediction with prediction accuracy of 99.47% and Confidence Interval of (99.22%, 99.65%).</p>
+<p>Model Results:</p>
+<p>Genralized Classification Tree using ‘rpart’ method Accuracy: 75.33% 95% CI: (0.7409, 0.7653)</p>
+<p>Random Forest Model using RandomForest Accuracy: 99.47% 95% CI: (0.9922, 0.9965)</p>
+<p>K-Means Clustering using “knn” method Accuracy: 91.50% 95% CI: (0.9068, 0.9226)</p>
+</div>
 <div id="test-data-set-generation-of-file" class="section level1">
 <h1>Test Data Set &amp; Generation OF File</h1>
 <pre class="r"><code>predictionfinal&lt;-predict(mod2, testing, type=&quot;class&quot;)

@@ -4,7 +4,9 @@ title: 'Practical Machine Learning Project: Human Activity Recognition(Weight Li
 author: "Someshwar Rao Sattiraju"
 date: "September 20, 2017"
 output:
-  md_document: default
+  html_document: default
+  
+  
 ---
 
 Script was executed using RStudio on Windows OS
@@ -131,6 +133,23 @@ prediction3 <- predict(mod3, testset)
 confusionMatrix(prediction3, testset$classe)
 ```
 
+#Conclusion
+
+Analysis was performed usign 3 models: Generalized Classification Trees, Random Forest and K-Means Clustering. Based on the result we find that Random Forest Model stands out to be the most accurate model to make the prediction with prediction accuracy of 99.47% and Confidence Interval of (99.22%, 99.65%).
+
+Model Results:
+
+Genralized Classification Tree using 'rpart' method 
+Accuracy: 75.33%
+95% CI: (0.7409, 0.7653)
+
+Random Forest Model using RandomForest
+Accuracy: 99.47%
+95% CI: (0.9922, 0.9965)
+
+K-Means Clustering using "knn" method
+Accuracy: 91.50%
+95% CI: (0.9068, 0.9226)
 
 # Test Data Set & Generation OF File
 ```{R Testing Model On Test Set , cache = TRUE}
